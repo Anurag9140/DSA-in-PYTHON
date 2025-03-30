@@ -82,6 +82,34 @@ def sq_area(length,breadth):
     print(area)
 sq_area(12,12)
 
+# Function to check whether 2 strings are equal or not
+def equal_strings(s,t):
+    len_s=0
+    len_t=0
+    while len_s<len(s):
+        len_s+=1
+    while len_t<len(t):
+        len_t+=1
+        
+    if(len_s != len_t):
+        return False
+    for i in range(len_s):
+        if(s[i] != t[i]):
+            return False
+        else:
+            return True
+print(equal_strings("HELLO","HELLO"))
+print(equal_strings("HELLO","hello"))
+
+# Function to remove duplicates from a string
+def remove_duplicates(s):
+    list=[]
+    for char in s:
+        if char not in list:
+            list.append(char)
+        string="".join(list)
+    return string
+print(remove_duplicates("programming"))
 
 
 
